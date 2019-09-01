@@ -82,7 +82,7 @@ class Resource(object):
     def get(self, **kwargs):
         url = self.url
         if len(kwargs) > 0:
-            url = '%s?%s' % (url, urllib.urlencode(kwargs))
+            url = '%s?%s' % (url, urllib.parse.urlencode(kwargs))
         logging.info('GET %s ' % url)
         response = requests.get(url, auth=self.api.auth,
                                 headers=self.api.customHeaders,
