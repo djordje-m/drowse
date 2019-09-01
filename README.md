@@ -4,7 +4,7 @@ drowse is a human readable Python slim REST client inspired by [Siesta](https://
 
 ## Quickstart
 ```python
-from drowse import API
+from drowse.drowse import API
 api = API('https://api.github.com/')
 repos = api.users.lgaggini.repos.get()
 ```
